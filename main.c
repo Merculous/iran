@@ -1,11 +1,11 @@
-#include "usb.h"
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
-#include "crc.h"
-#include "openssl/aes.h"
-#include "openssl/sha.h"
 #include <string.h>
+#include <openssl/aes.h>
+#include <openssl/sha.h>
+#include <libusb-compat/usb.h>
+#include "crc.h"
 
 const unsigned char key837[] = {0x18, 0x84, 0x58, 0xA6, 0xD1, 0x50, 0x34, 0xDF, 0xE3, 0x86, 0xF2, 0x3B, 0x61, 0xD4, 0x37, 0x74};
 
