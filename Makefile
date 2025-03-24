@@ -1,11 +1,10 @@
 CC=gcc
-CFLAGS=-lusb -lcrypto
+LDFLAGS=-lusb -lcrypto
 
 .SILENT: iran clean
 	
 iran: main.o
-	$(CC) *.o $(CFLAGS) -o iran
+	$(CC) *.o $(CFLAGS) $(LDFLAGS) -o iran
 
 clean:
 	rm -f *.o iran
-
